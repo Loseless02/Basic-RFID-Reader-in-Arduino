@@ -27,7 +27,7 @@ void loop() {
       pinMode(redLight, HIGH); 
   }
   }
-  if(movement != HIGH){                           //Hareketlilik yok ise içerideki komutlar uygulanır.
+  if(movement != HIGH){                           //If there is no movement, the commands inside are applied
     pinMode(redLight, HIGH); 
   }
 }
