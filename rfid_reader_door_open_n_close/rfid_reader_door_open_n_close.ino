@@ -1,6 +1,6 @@
 #include <Servo.h>                //Adding our servo library
 
-int pirPin = 8;                   //The pin to attach the sensor to
+int sensorPin = 8;                //The pin to attach the sensor to
 int servoPin = 9;                 //The pin to connect the servo
 int movement;                     //Data from the sensor
 int greenLight = 2;
@@ -10,12 +10,12 @@ Servo motor;                      //Servomotor variable
 
 void setup() {
   motor.attach(servoPin);         //Connect the servo to pin 9
-  pinMode(pirPin, INPUT);         //Set the sensor pin as input
+  pinMode(sensorPin, INPUT);         //Set the sensor pin as input
 
 }
 
 void loop() {
-  movement = digitalRead(pirPin);  //Reading from the sensor
+  movement = digitalRead(sensorPin);  //Reading from the sensor
   
   if(movement == LOW){                           //If there is no movement, the commands inside are applied
     pinMode(redLight, HIGH); 
